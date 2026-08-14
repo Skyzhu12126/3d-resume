@@ -181,6 +181,19 @@ export default function App() {
         <div className="hero-meta hm-tr">Portfolio — 2025</div>
         <div className="hero-meta hm-bl">Quality · Efficiency · Innovation</div>
         <div className="hero-meta hm-right">Automotive Electronics</div>
+        {/* 3D头像卡片：叠加在首屏右侧 */}
+        <motion.div
+          className="hero-avatar-card"
+          initial={{ opacity: 0, scale: 0.88, x: 40 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ delay: 0.8, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          style={{ opacity: heroChromeOpacity }}
+        >
+          <div className="avatar-frame">
+            <img src="/images/bp.png" alt="Sky 朱培培" className="avatar-img" />
+          </div>
+          <div className="avatar-caption">智能制造 · 20年深耕</div>
+        </motion.div>
       </motion.div>
 
       {/* 全屏胶片噪点蒙层（multiply 混合） */}
