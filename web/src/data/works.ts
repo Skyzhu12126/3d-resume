@@ -1,17 +1,17 @@
-// 作品集数据（双语）。5 大板块 → 点击展开作品详情。
-// 纯数据驱动：增删板块 / 作品只改本文件，Works.jsx 仅负责渲染。
+// 作品集数据(双语)。5 大板块 → 点击展开作品详情。
+// 纯数据驱动:增删板块 / 作品只改本文件,Works.jsx 仅负责渲染。
 //
-// 板块字段：
-//   id        唯一标识（用于 framer layoutId 共享元素动画）
-//   no        编号 '01'…'05'
+// 板块字段:
+//   id        唯一标识(用于 framer layoutId 共享元素动画)
+//   no        编号 '01'...'05'
 //   title     板块标题
 //   tagline   索引行右侧一句话
-//   items[]   扁平作品列表：{ name, meta?, tags?, link? }
-//             点击 item 弹出全屏详情，可补充可选媒体/文案字段：
-//             { image?, video?, year?, desc? }（缺省时媒体用占位、简介回退 meta/标签）
-//   groups[]  分组作品（与 items 二选一）：{ heading, items: string[] }
-//   awards[]  奖项 chip（可选）
-//   footer    底部技术/备注一行（可选）
+//   items[]   扁平作品列表:{ name, meta?, tags?, link? }
+//             点击 item 弹出全屏详情,可补充可选媒体/文案字段:
+//             { image?, video?, year?, desc? }(缺省时媒体用占位、简介回退 meta/标签)
+//   groups[]  分组作品(与 items 二选一):{ heading, items: string[] }
+//   awards[]  奖项 chip(可选)
+//   footer    底部技术/备注一行(可选)
 
 export interface WorkListItem {
   name: string
@@ -65,65 +65,63 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     countLabel: (n) => `${n} 件作品`,
     sections: [
       {
-        id: 'ad',
+        id: 'production',
         no: '01',
-        title: '广告项目',
-        tagline: '坏打印机工作室',
+        title: '智能产线',
+        tagline: '自动化生产项目',
         items: [
-          { name: '谁在弹古琴', meta: '互动项目', slug: 'guqin' },
-          { name: '新加坡联合早报 · 校园时光机', meta: '互动项目', slug: 'time-machine' },
-          { name: '动画合集', meta: '动画', slug: 'animation-collection' },
-          { name: '其他作品', slug: 'other-works' },
+          {
+            name: '自动驾驶域控制器全自动化生产线',
+            meta: '自动化率85%，良品率98%+',
+            slug: 'domain-controller-line',
+          },
+          {
+            name: '摄像头组装全自动化产线',
+            meta: '全球首条10s摄像头组装线',
+            tags: ['理想L789、岚图交付'],
+            slug: 'camera-assembly-line',
+          },
         ],
-        awards: ['虎啸奖', 'FWA', 'Awwwards'],
       },
       {
-        id: 'maker',
+        id: 'factory',
         no: '02',
-        title: '自媒体',
-        tagline: '23 万关注 ｜ 年更博主',
+        title: '智能工厂',
+        tagline: '工厂规划与建设',
         items: [
           {
-            name: '我把工作室的玻璃墙改造成了游戏机',
-            meta: '1700 万 播放',
-            tags: ['B站每周必看', 'B站热搜'],
-            slug: 'glass-wall-arcade',
+            name: '智能工厂规划与落地',
+            meta: '总投资5000万',
+            tags: ['自动化率85%'],
+            slug: 'smart-factory',
           },
-          {
-            name: '我把代码写入狗狗的衣服里',
-            meta: '900 万 播放',
-            tags: ['微博 / 抖音 / B站 三平台热搜榜'],
-            slug: 'dog-code-clothes',
-          },
-          {
-            name: '我把 Switch 放大十倍，做成了智能猫窝',
-            meta: '500 万 播放',
-            tags: ['B站每周必看'],
-            slug: 'switch-cat-house',
-          },
-          { name: '我们在80年代的红白机游戏里结婚啦！！', slug: 'retro-game-wedding' },
         ],
-        footer: '3D 建模 · 3D 打印 · PCB 设计 · 嵌入式开发 · 软件开发 · 动画包装',
       },
       {
-        id: 'product',
+        id: 'logistics',
         no: '03',
-        title: '产品',
-        tagline: 'ZOOOP',
+        title: '智能物流',
+        tagline: '端到端物流网络',
         items: [
-          { name: 'ZOOOP', meta: 'AI 原生创作平台', link: 'https://zooop.ai/', slug: 'zooop' },
+          {
+            name: '端到端智能物流网络',
+            meta: 'VMI/JIT',
+            tags: ['库存周转天数缩短30%', '运输成本下降18%'],
+            slug: 'smart-logistics',
+          },
         ],
       },
       {
-        id: 'graphics',
+        id: 'training',
         no: '04',
-        title: '个人业余作品',
-        tagline: 'Raymarching · WebGL · Blender',
+        title: '培训经历',
+        tagline: '专业资质与培训',
         items: [
-          { name: 'Raymarching', slug: 'raymarching' },
-          { name: 'WebGL', slug: 'webgl' },
-          { name: 'Blender', slug: 'blender' },
-          { name: '其他业余作品', slug: 'other-side-works' },
+          { name: 'TWI企业内训', meta: '2009' },
+          { name: '6 Sigma', meta: '2009-2010' },
+          { name: '麦格钠领导力发展计划', meta: '2011-2012' },
+          { name: 'VDA6.3/Q1/QSB内审员培训', meta: '2013' },
+          { name: 'GQS全球质量体系审核', meta: '2014' },
         ],
       },
     ],
@@ -141,81 +139,79 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     countLabel: (n) => `${n} works`,
     sections: [
       {
-        id: 'ad',
+        id: 'production',
         no: '01',
-        title: 'Advertising',
-        tagline: 'HOTSAR · Bad Printer',
+        title: 'Smart Production Lines',
+        tagline: 'Automated Manufacturing Projects',
         items: [
-          { name: 'Who’s Talking About Guqin', meta: 'Interactive', slug: 'guqin' },
-          { name: 'Lianhe Zaobao · Campus Time Machine', meta: 'Interactive', slug: 'time-machine' },
-          { name: 'Animation Reel', meta: 'Animation', slug: 'animation-collection' },
-          { name: 'Other works', slug: 'other-works' },
+          {
+            name: 'Autonomous Driving Domain Controller Fully Automated Production Line',
+            meta: '85% automation, 98%+ yield',
+            slug: 'domain-controller-line',
+          },
+          {
+            name: 'Camera Assembly Fully Automated Line',
+            meta: 'World\'s first 10s camera assembly line',
+            tags: ['Li Auto L789, Voyah delivery'],
+            slug: 'camera-assembly-line',
+          },
         ],
-        awards: ['Tiger Roar', 'FWA', 'Awwwards'],
       },
       {
-        id: 'maker',
+        id: 'factory',
         no: '02',
-        title: 'Content Creator',
-        tagline: '230K followers',
+        title: 'Smart Factory',
+        tagline: 'Factory Planning & Construction',
         items: [
           {
-            name: '“I Turned the Studio’s Glass Wall into a Game Console”',
-            meta: '17M views',
-            tags: ['Bilibili Weekly Picks', 'Bilibili Trending'],
-            slug: 'glass-wall-arcade',
+            name: 'Smart Factory Planning & Implementation',
+            meta: '50M RMB investment',
+            tags: ['85% automation rate'],
+            slug: 'smart-factory',
           },
-          {
-            name: '“I Wrote Code into My Dog’s Clothes”',
-            meta: '9M views',
-            tags: ['Trending on Weibo / Douyin / Bilibili'],
-            slug: 'dog-code-clothes',
-          },
-          {
-            name: '“I Made a 10× Switch into a Smart Cat House”',
-            meta: '5M views',
-            tags: ['Bilibili Weekly Picks'],
-            slug: 'switch-cat-house',
-          },
-          { name: '“We Got Married in an 80s Famicom Game!!”', slug: 'retro-game-wedding' },
         ],
-        footer: 'Tech: 3D modeling · 3D printing · PCB design · embedded · software · motion graphics',
       },
       {
-        id: 'product',
+        id: 'logistics',
         no: '03',
-        title: 'Products',
-        tagline: 'ZOOOP',
+        title: 'Smart Logistics',
+        tagline: 'End-to-End Logistics Network',
         items: [
-          { name: 'ZOOOP', meta: 'AI-native creation platform', link: 'https://zooop.ai/', slug: 'zooop' },
+          {
+            name: 'End-to-End Smart Logistics Network',
+            meta: 'VMI/JIT',
+            tags: ['Inventory turnover reduced 30%', 'Transport cost down 18%'],
+            slug: 'smart-logistics',
+          },
         ],
       },
       {
-        id: 'graphics',
+        id: 'training',
         no: '04',
-        title: 'Side Projects',
-        tagline: 'Raymarching · WebGL · Blender',
+        title: 'Training',
+        tagline: 'Professional Certifications',
         items: [
-          { name: 'Raymarching', slug: 'raymarching' },
-          { name: 'WebGL', slug: 'webgl' },
-          { name: 'Blender', slug: 'blender' },
-          { name: 'Other side projects', slug: 'other-side-works' },
+          { name: 'TWI Corporate Training', meta: '2009' },
+          { name: '6 Sigma', meta: '2009-2010' },
+          { name: 'Magna Leadership Development Program', meta: '2011-2012' },
+          { name: 'VDA6.3/Q1/QSB Internal Auditor Training', meta: '2013' },
+          { name: 'GQS Global Quality System Audit', meta: '2014' },
         ],
       },
     ],
   },
 }
 
-// 板块配图（横向画廊每张卡片左侧的整高封面）。放到 public/works/covers/ 下。
-// 缺图时左栏用大编号渐变占位，放入图片后自动点亮。
+// 板块配图(横向画廊每张卡片左侧的整高封面)。放到 public/works/covers/ 下。
+// 缺图时左栏用大编号渐变占位,放入图片后自动点亮。
 export const SECTION_COVERS: Record<string, string> = {
-  ad: `${import.meta.env.BASE_URL}works/covers/ad.jpg`,
-  maker: `${import.meta.env.BASE_URL}works/covers/maker.jpg`,
-  product: `${import.meta.env.BASE_URL}works/covers/product.jpg`,
-  graphics: `${import.meta.env.BASE_URL}works/covers/graphics.jpg`,
+  production: `${import.meta.env.BASE_URL}works/covers/ad.jpg`,
+  factory: `${import.meta.env.BASE_URL}works/covers/maker.jpg`,
+  logistics: `${import.meta.env.BASE_URL}works/covers/product.jpg`,
+  training: `${import.meta.env.BASE_URL}works/covers/graphics.jpg`,
 }
 
-// 统计一个板块的作品数（items 或 groups 求和），用于索引行 hover 显示
+// 统计一个板块的作品数(items 或 groups 求和),用于索引行 hover 显示
 export function sectionCount(section: WorkSection): number {
   if (section.items) return section.items.length
   if (section.groups) return section.groups.reduce((n, g) => n + g.items.length, 0)

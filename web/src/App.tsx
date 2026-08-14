@@ -24,15 +24,15 @@ type Lang = 'en' | 'zh'
 
 const COPY = {
   en: {
-    title: 'About Sen',
+    title: 'About Sky',
     paragraphs: [
-      "I'm Sen — a creative technologist living where code meets art. I spend my days around coding, creativity, playful interaction & design, and CG work. I love studying and combining skills across different fields — to create, and to explore more possibilities.",
+      "I'm Sky (Zhu Peipei) — a senior manufacturing executive specializing in intelligent manufacturing and lean production. With 15+ years in automotive electronics, I've led factory launches, production line automation, and quality management systems. My strengths include integrity, humility, strong drive for success, empathy, team spirit, proactive attitude, responsibility, attention to detail, and innovative thinking.",
     ],
   },
   zh: {
-    title: 'About Sen',
+    title: 'About Sky',
     paragraphs: [
-      '我是 Sen——一个游走在代码与艺术之间的创意技术人。我常年和 Coding、创意、有趣的交互 & 设计、CG 创作等打交道，喜欢研究并组合不同领域的技能，来创造并探索更多可能性。',
+      '我是 Sky（朱培培）——智能制造领域的资深管理专家。我拥有15年以上的汽车电子行业经验，主导过多个智能工厂建设与自动化生产线项目。我的优势在于为人正直、稳定谦虚、事业心强、进取心强、善于换位思考、热爱集体、积极肯干、责任心强、细心、独立又协同、有创新能力。',
     ],
   },
 }
@@ -170,12 +170,12 @@ export default function App() {
         <span className="hero-mark bl">+</span>
         <span className="hero-mark br">+</span>
         <div className="hero-meta hm-tl">
-          <span className="hm-name">Sen Zheng 郑越升</span>
-          <span>Creative Technologist</span>
+          <span className="hm-name">Sky 朱培培</span>
+          <span>GM of Intelligent Manufacturing</span>
         </div>
-        <div className="hero-meta hm-tr">Portfolio — 2026</div>
-        <div className="hero-meta hm-bl">Code · Art · Play</div>
-        <div className="hero-meta hm-right">Based in Shenzhen</div>
+        <div className="hero-meta hm-tr">Portfolio — 2025</div>
+        <div className="hero-meta hm-bl">Quality · Efficiency · Innovation</div>
+        <div className="hero-meta hm-right">Automotive Electronics</div>
       </motion.div>
 
       {/* 全屏胶片噪点蒙层（multiply 混合） */}
