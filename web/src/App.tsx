@@ -26,13 +26,18 @@ const COPY = {
   en: {
     title: 'About Sky',
     paragraphs: [
-      "I'm Sky (Zhu Peipei) — a senior manufacturing executive specializing in intelligent manufacturing and lean production. With 15+ years in automotive electronics, I've led factory launches, production line automation, and quality management systems. My strengths include integrity, humility, strong drive for success, empathy, team spirit, proactive attitude, responsibility, attention to detail, and innovative thinking.",
+      "I'm Sky (Zhu Peipei) — a senior manufacturing executive specializing in intelligent manufacturing and lean production. With 20+ years in automotive electronics, I've led factory launches, production line automation, and quality management systems across world-class enterprises like NavInfo, Zongmu Technology, and Magna Electronics.",
+      "My core expertise spans smart factory planning, fully automated production lines, lean manufacturing systems, and end-to-end supply chain optimization. I've successfully delivered projects including 85% automation rate domain controller lines, world's first 10s camera assembly lines, and VMI/JIT logistics networks that cut inventory turnover by 30%.",
+      "My strengths include integrity, humility, strong drive for success, empathy, team spirit, proactive attitude, responsibility, attention to detail, and innovative thinking. I'm passionate about bridging cutting-edge automotive technology with world-class manufacturing excellence.",
     ],
   },
   zh: {
     title: 'About Sky',
     paragraphs: [
-      '我是 Sky（朱培培）——智能制造领域的资深管理专家。我拥有15年以上的汽车电子行业经验，主导过多个智能工厂建设与自动化生产线项目。我的优势在于为人正直、稳定谦虚、事业心强、进取心强、善于换位思考、热爱集体、积极肯干、责任心强、细心、独立又协同、有创新能力。',
+      '我是 Sky（朱培培）——智能制造领域的资深管理专家，现任四维图新智能制造总经理。',
+      '拥有20年汽车电子行业深耕经验，曾在纵目科技担任运营副总裁、在麦格纳电子担任生产部经理。主导过多个千万级智能工厂建设项目，包括全球首条10秒摄像头自动化组装线、自动驾驶域控制器全自动产线（自动化率85%、良品率98%+）等标杆项目。',
+      '专业领域涵盖：智能工厂规划与落地、全自动化生产线设计、精益生产体系搭建、端到端供应链优化、质量管理体系构建。成功搭建VMI/JIT智能物流网络，实现库存周转天数缩短30%、运输成本下降18%。',
+      '为人正直、稳定谦虚、事业心强、进取心强、善于换位思考、热爱集体。具备优秀的团队领导力和跨部门协调能力，在智能制造领域持续创新突破。',
     ],
   },
 }
